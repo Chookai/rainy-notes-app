@@ -1,0 +1,128 @@
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: var(--spacing-md);
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-xs);
+}
+
+.notes-header h2 {
+  font-size: 1.5rem;
+  color: var(--mist-light);
+  font-weight: 700;
+}
+
+.new-note-button {
+  width: 36px;
+  height: 36px;
+  background: var(--moss-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: var(--mist-light);
+}
+
+.new-note-button:hover {
+  background: var(--forest-light);
+  transform: scale(1.1);
+}
+
+.new-note-button svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.notes-scroll {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding-right: var(--spacing-xs);
+}
+
+.empty-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--fog-gray);
+  text-align: center;
+  gap: var(--spacing-sm);
+}
+
+.empty-hint {
+  font-size: 0.9rem;
+  color: var(--mist-medium);
+}
+
+.note-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-organic);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+.note-card:hover {
+  border-color: var(--moss-green);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.note-card.active {
+  border-color: var(--forest-light);
+  background: var(--forest-medium);
+}
+
+.note-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--mist-light);
+  margin-bottom: var(--spacing-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note-preview {
+  font-size: 0.9rem;
+  color: var(--mist-medium);
+  line-height: 1.4;
+  margin-bottom: var(--spacing-sm);
+}
+
+.note-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--fog-gray);
+  gap: var(--spacing-sm);
+}
+
+.note-tags-preview {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.tag-badge {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  color: var(--mist-light);
+  font-weight: 500;
+}

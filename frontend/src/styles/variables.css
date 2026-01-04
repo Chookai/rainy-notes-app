@@ -1,0 +1,44 @@
+:root {
+  /* Primary forest greens */
+  --forest-dark: #1a3a1a;
+  --forest-medium: #2d5a2d;
+  --forest-light: #4a7c4a;
+  --moss-green: #6b8e6b;
+
+  /* Earth tones */
+  --bark-brown: #4a3628;
+  --soil-brown: #5c4a3a;
+
+  /* Misty grays */
+  --mist-light: #e8f0e8;
+  --mist-medium: #c5d4c5;
+  --fog-gray: #9fb09f;
+
+  /* Accent colors */
+  --rain-blue: #7ba3c0;
+  --dewdrop: #b8d4e8;
+
+  /* UI colors */
+  --bg-primary: #1e2d1e;
+  --bg-secondary: #2a3f2a;
+  --bg-card: #243524;
+  --text-primary: #e8f0e8;
+  --text-secondary: #c5d4c5;
+  --border-color: #4a5a4a;
+
+  /* Opacity for overlays */
+  --overlay-opacity: 0.85;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-organic: 20px 25px 20px 25px;
+}

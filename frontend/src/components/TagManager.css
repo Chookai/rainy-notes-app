@@ -1,0 +1,116 @@
+.tag-manager {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.tag-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag-header h3 {
+  font-size: 1.1rem;
+  color: var(--mist-light);
+  font-weight: 600;
+}
+
+.add-tag-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--forest-medium);
+  color: var(--mist-light);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.add-tag-button:hover {
+  background: var(--forest-light);
+  transform: rotate(90deg);
+}
+
+.tag-create-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  animation: fadeIn 0.2s ease;
+}
+
+.tag-input-group {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.tag-input {
+  flex: 1;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  font-size: 0.9rem;
+}
+
+.tag-color-picker {
+  width: 40px;
+  height: 34px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.create-button {
+  background: var(--moss-green);
+  color: var(--mist-light);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.create-button:hover {
+  background: var(--forest-light);
+}
+
+.tag-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.tag-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  color: var(--mist-medium);
+}
+
+.tag-item:hover {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.tag-item.active {
+  background: var(--forest-medium);
+  border-color: var(--moss-green);
+  color: var(--mist-light);
+}
+
+.tag-bullet {
+  font-size: 0.8rem;
+}
