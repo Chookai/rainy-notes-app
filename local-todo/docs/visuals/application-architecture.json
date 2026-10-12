@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Small Hours · application architecture",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "viewBox": [1040, 670],
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": { "label": "React client controls" },
+        "backend": { "label": "Next.js server modules" },
+        "database": { "label": "SQLite file" }
+      }
+    }
+  },
+  "components": [
+    { "id": "app-shell", "type": "backend", "label": "RootLayout + Providers", "sublabel": "layout.tsx · theme + Undo context", "pos": [40, 40], "size": [230, 90] },
+    { "id": "app-routes", "type": "backend", "label": "Overview / list detail", "sublabel": "/ · /lists/[id] · Server Components", "pos": [40, 200], "size": [230, 90] },
+    { "id": "app-controls", "type": "frontend", "label": "Interactive React controls", "sublabel": "ListForm · TaskForm · TaskRow", "pos": [40, 360], "size": [230, 90] },
+    { "id": "app-actions", "type": "backend", "label": "Server Actions", "sublabel": "src/app/actions.ts", "pos": [400, 360], "size": [230, 90] },
+    { "id": "app-repository", "type": "backend", "label": "Task / list repository", "sublabel": "src/lib/tasks.ts · CRUD + counts", "pos": [760, 360], "size": [230, 90] },
+    { "id": "app-database", "type": "database", "label": "SQLite · lists + tasks", "sublabel": "data/todo.sqlite · better-sqlite3", "pos": [760, 520], "size": [230, 90] },
+    { "id": "app-undo", "type": "backend", "label": "Undo recovery registry", "sublabel": "src/lib/undo.ts · 5s in memory", "pos": [400, 200], "size": [230, 90] }
+  ],
+  "connections": [
+    { "id": "shell-renders-routes", "from": "app-shell", "to": "app-routes", "label": "wraps routes", "fromSide": "bottom", "toSide": "top", "labelAt": [155, 165] },
+    { "id": "routes-render-controls", "from": "app-routes", "to": "app-controls", "label": "renders controls", "fromSide": "bottom", "toSide": "top", "labelAt": [155, 325] },
+    { "id": "controls-call-actions", "from": "app-controls", "to": "app-actions", "label": "server action calls" },
+    { "id": "actions-write-repository", "from": "app-actions", "to": "app-repository", "label": "validated writes", "labelAt": [695, 426] },
+    { "id": "repository-uses-sqlite", "from": "app-repository", "to": "app-database", "label": "prepared SQL", "fromSide": "bottom", "toSide": "top", "labelAt": [875, 485] },
+    { "id": "routes-read-repository", "from": "app-routes", "to": "app-repository", "label": "read lists / tasks", "fromSide": "right", "toSide": "top", "via": [[335, 245], [335, 160], [875, 160]] },
+    { "id": "actions-use-undo", "from": "app-actions", "to": "app-undo", "label": "delete / recover", "fromSide": "top", "toSide": "bottom" },
+    { "id": "undo-restores-task", "from": "app-undo", "to": "app-repository", "label": "restore original task" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Application boundaries", "items": ["Server pages read storage directly; interactive controls mutate through Server Actions.", "Providers keep theme, reduced-motion settings, and Undo notifications shared across routes.", "Counts / confirmation UI / Magic UI Blur Fade live in src/components; only server modules access SQLite."] }
+  ]
+}
