@@ -4,7 +4,8 @@
 
 **Blocked by:** 01 — Capture tasks in a persistent default list.
 
-**Status:** resolved
+Status: ready-for-agent
+Resolution: implemented
 
 - [x] The user can edit titles of unfinished and completed tasks. Editing preserves identity, list ownership, completion state, and original creation ordering.
 - [x] Edited titles are trimmed, blank titles rejected by the UI and server, and duplicate titles allowed.

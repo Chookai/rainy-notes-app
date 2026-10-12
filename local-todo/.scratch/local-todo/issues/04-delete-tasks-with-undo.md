@@ -4,7 +4,8 @@
 
 **Blocked by:** 03 — Edit, complete, and reopen tasks.
 
-**Status:** resolved
+Status: ready-for-agent
+Resolution: implemented
 
 - [x] Deleting an individual unfinished or completed task requires no confirmation and persists deletion immediately rather than waiting for Undo expiry.
 - [x] The task disappears and its count contributions are removed immediately, including while Undo is available. Unfinished deletion reduces total and remaining; completed deletion reduces total and completed.

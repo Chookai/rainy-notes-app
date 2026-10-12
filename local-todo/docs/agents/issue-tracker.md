@@ -10,6 +10,9 @@ Issues and specs for this repo live as Markdown files in `.scratch/`.
   numbered from `01`, one file per ticket.
 - Triage state: a `Status:` line near the top of each ticket.
   Use the role strings in `triage-labels.md`.
+- Track implementation completion separately with `Resolution: implemented`.
+  Completed tickets retain their triage status but must not be queued again.
+  Implementation dependencies are satisfied by this resolution, not triage status.
 - Append conversation under a `## Comments` heading.
 
 ## Publishing and fetching

@@ -4,7 +4,8 @@
 
 **Blocked by:** None — can start immediately.
 
-**Status:** resolved
+Status: ready-for-agent
+Resolution: implemented
 
 - [x] The app runs on localhost without accounts or cloud services and uses a local app server to access persistent SQLite.
 - [x] A fresh database receives exactly one "My Tasks" list. Repeated startup does not duplicate it, and initialization state is stored independently of whether lists exist.

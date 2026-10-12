@@ -4,7 +4,8 @@
 
 **Blocked by:** 01 — Capture tasks in a persistent default list.
 
-**Status:** resolved
+Status: ready-for-agent
+Resolution: implemented
 
 - [x] The overview offers list creation, and successful creation produces a persisted empty list with zero counts that can be opened immediately.
 - [x] The user can rename a list without changing its identity, tasks, or counts. The overview and detail screen reflect its new name.

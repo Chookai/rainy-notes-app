@@ -4,7 +4,8 @@
 
 **Blocked by:** 02 — Create and rename lists; 04 — Delete tasks with five-second Undo.
 
-**Status:** resolved
+Status: ready-for-agent
+Resolution: implemented
 
 - [x] Deleting a list presents explicit confirmation that its tasks will also be removed. Cancellation leaves the list, its tasks, and all counts unchanged.
 - [x] Confirmation persistently removes the list and its tasks together, without orphan tasks or partial successful deletion.
